@@ -1,4 +1,4 @@
-import { StatusBadge } from "@/components/ui/StatusBadge";
+import { StatusBadge } from "@/components/common/StatusBadge";
 import type { StatusTone, Task } from "@/types";
 
 const priorityTone: Record<Task["priority"], StatusTone> = {

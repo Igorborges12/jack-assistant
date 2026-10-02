@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card, CardHeader } from "@/components/ui/Card";
+import { Card, CardHeader } from "@/components/common/Card";
 import { ApprovalCard } from "@/components/ApprovalCard";
-import { LoadingState } from "@/components/ui/LoadingState";
-import { StatusBadge } from "@/components/ui/StatusBadge";
+import { LoadingState } from "@/components/common/LoadingState";
+import { StatusBadge } from "@/components/common/StatusBadge";
 import { approvalsService, emailService } from "@/services";
 import { formatTime } from "@/lib/format";
 

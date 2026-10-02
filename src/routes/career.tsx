@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card, CardHeader } from "@/components/ui/Card";
+import { Card, CardHeader } from "@/components/common/Card";
 import { JobCard } from "@/components/JobCard";
-import { LoadingState } from "@/components/ui/LoadingState";
+import { LoadingState } from "@/components/common/LoadingState";
 import { careerService } from "@/services";
 import { formatDate } from "@/lib/format";
 

@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card, CardHeader } from "@/components/ui/Card";
-import { LoadingState } from "@/components/ui/LoadingState";
+import { Card, CardHeader } from "@/components/common/Card";
+import { LoadingState } from "@/components/common/LoadingState";
 import { studyService } from "@/services";
 
 export const Route = createFileRoute("/study")({
