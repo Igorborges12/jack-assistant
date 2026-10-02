@@ -38,15 +38,27 @@ export interface Job {
   source: string;
   date: string;
   status: JobStatus;
+  favorite?: boolean;
+  description?: string;
 }
 
 export interface Application {
   id: string;
   jobTitle: string;
   company: string;
-  stage: string;
+  stage: ApplicationStage;
   updatedAt: string;
 }
+
+export const APPLICATION_STAGES = [
+  "Triagem",
+  "Entrevista RH",
+  "Entrevista técnica",
+  "Proposta",
+  "Aguardando retorno",
+  "Encerrada",
+] as const;
+export type ApplicationStage = (typeof APPLICATION_STAGES)[number];
 
 export interface Company {
   id: string;
@@ -69,6 +81,7 @@ export interface EmailItem {
   preview: string;
   receivedAt: string;
   important: boolean;
+  body?: string;
 }
 
 export interface EmailDraft {
@@ -118,10 +131,26 @@ export interface Task {
   done: boolean;
 }
 
+export type ApprovalStatus = "pending" | "approved" | "rejected";
+
 export interface Approval {
   id: string;
   agent: AgentId;
   action: string;
   description: string;
   date: string;
+  /** True when executing depends on an external integration (email, calendar...). */
+  external: boolean;
+  status: ApprovalStatus;
+  decidedAt?: string;
+}
+
+export interface AppNotification {
+  id: string;
+  agent: AgentId;
+  title: string;
+  description: string;
+  createdAt: string;
+  read: boolean;
+  to?: string;
 }

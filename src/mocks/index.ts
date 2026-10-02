@@ -1,4 +1,5 @@
 import type {
+  AppNotification,
   Application,
   Approval,
   CalendarEvent,
@@ -38,6 +39,8 @@ export const mockApprovals: Approval[] = [
     action: "Revisar candidatura",
     description: "Candidatura para Senior Backend Engineer na Northwind aguarda sua revisão.",
     date: "2026-09-30T09:12:00",
+    external: true,
+    status: "pending",
   },
   {
     id: "ap_2",
@@ -45,6 +48,8 @@ export const mockApprovals: Approval[] = [
     action: "Aprovar resposta de e-mail",
     description: "Resposta gerada para a proposta comercial da Lumen Tech.",
     date: "2026-09-30T08:47:00",
+    external: true,
+    status: "pending",
   },
   {
     id: "ap_3",
@@ -52,6 +57,8 @@ export const mockApprovals: Approval[] = [
     action: "Confirmar evento",
     description: "Confirmar 1:1 com Ana na quinta-feira às 15:00.",
     date: "2026-09-29T18:20:00",
+    external: true,
+    status: "pending",
   },
 ];
 
@@ -226,4 +233,34 @@ export const mockTasks: Task[] = [
   { id: "t_1", title: "Atualizar currículo de dados", due: "Hoje", priority: "alta", done: false },
   { id: "t_2", title: "Responder proposta da Lumen", due: "Amanhã", priority: "média", done: false },
   { id: "t_3", title: "Revisar anotações de Raft", due: "Quinta", priority: "baixa", done: true },
+];
+
+export const mockNotifications: AppNotification[] = [
+  {
+    id: "n_1",
+    agent: "career",
+    title: "3 novas vagas encontradas",
+    description: "Vagas compatíveis com seu perfil de Backend Sênior.",
+    createdAt: "2026-09-30T08:05:00",
+    read: false,
+    to: "/career",
+  },
+  {
+    id: "n_2",
+    agent: "email",
+    title: "Rascunho preparado",
+    description: "Resposta para a Lumen Tech aguarda sua revisão.",
+    createdAt: "2026-09-30T08:46:00",
+    read: false,
+    to: "/approvals",
+  },
+  {
+    id: "n_3",
+    agent: "study",
+    title: "Sessão de estudo em 1 hora",
+    description: "Sistemas distribuídos — Consenso e Raft.",
+    createdAt: "2026-09-30T08:00:00",
+    read: true,
+    to: "/study",
+  },
 ];
