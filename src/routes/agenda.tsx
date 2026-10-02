@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card, CardHeader } from "@/components/ui/Card";
+import { Card, CardHeader } from "@/components/common/Card";
 import { EventCard } from "@/components/EventCard";
 import { TaskCard } from "@/components/TaskCard";
-import { LoadingState } from "@/components/ui/LoadingState";
-import { EmptyState } from "@/components/ui/EmptyState";
+import { LoadingState } from "@/components/common/LoadingState";
+import { EmptyState } from "@/components/common/EmptyState";
 import { calendarService, tasksService } from "@/services";
 
 export const Route = createFileRoute("/agenda")({

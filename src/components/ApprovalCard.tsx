@@ -1,5 +1,5 @@
-import { AgentBadge } from "@/components/ui/AgentBadge";
-import { Button } from "@/components/ui/Button";
+import { AgentBadge } from "@/components/common/AgentBadge";
+import { Button } from "@/components/common/Button";
 import { formatDate, formatTime } from "@/lib/format";
 import type { Approval } from "@/types";
 

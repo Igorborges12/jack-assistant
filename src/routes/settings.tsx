@@ -1,8 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card, CardHeader } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { AgentBadge } from "@/components/ui/AgentBadge";
+import { Card, CardHeader } from "@/components/common/Card";
+import { Button } from "@/components/common/Button";
+import { AgentBadge } from "@/components/common/AgentBadge";
 import { mockUser } from "@/mocks";
 import type { AgentId } from "@/types";
 

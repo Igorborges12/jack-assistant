@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
 interface HeaderProps {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   title: string;
-  subtitle?: string;
-  action?: ReactNode;
+  subtitle?: string | undefined;
+  action?: ReactNode | undefined;
   onOpenMenu?: () => void;
 }
 

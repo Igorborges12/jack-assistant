@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/common/Button";
 
 export const Route = createFileRoute("/")({
   head: () => ({

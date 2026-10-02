@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { AppLayout } from "@/layouts/AppLayout";
-import { Card } from "@/components/ui/Card";
-import { AgentBadge } from "@/components/ui/AgentBadge";
+import { Card } from "@/components/common/Card";
+import { AgentBadge } from "@/components/common/AgentBadge";
 import { ChatMessage } from "@/components/chat/ChatMessage";
 import { ChatInput } from "@/components/chat/ChatInput";
 import { chatService } from "@/services";

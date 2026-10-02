@@ -1,4 +1,4 @@
-import { StatusBadge } from "@/components/ui/StatusBadge";
+import { StatusBadge } from "@/components/common/StatusBadge";
 import { formatDate } from "@/lib/format";
 import type { Job, JobStatus, StatusTone } from "@/types";
 
