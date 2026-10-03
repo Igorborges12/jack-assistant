@@ -9,15 +9,15 @@ import type { AgentId } from "@/types";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — Personal AI OS" },
+      { title: "Settings — Jack" },
       {
         name: "description",
-        content: "Perfil, agentes ativos e preferências de aprovação do Personal AI OS.",
+        content: "Perfil, agentes ativos e preferências de aprovação do Jack.",
       },
-      { property: "og:title", content: "Settings — Personal AI OS" },
+      { property: "og:title", content: "Settings — Jack" },
       {
         property: "og:description",
-        content: "Perfil, agentes ativos e preferências de aprovação do Personal AI OS.",
+        content: "Perfil, agentes ativos e preferências de aprovação do Jack.",
       },
     ],
   }),

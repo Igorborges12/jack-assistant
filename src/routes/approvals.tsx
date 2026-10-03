@@ -13,12 +13,12 @@ import type { Approval } from "@/types";
 export const Route = createFileRoute("/approvals")({
   head: () => ({
     meta: [
-      { title: "Approvals — Personal AI OS" },
+      { title: "Approvals — Jack" },
       {
         name: "description",
         content: "Aprove ou recuse cada ação sugerida pelos agentes antes de qualquer execução.",
       },
-      { property: "og:title", content: "Approvals — Personal AI OS" },
+      { property: "og:title", content: "Approvals — Jack" },
       {
         property: "og:description",
         content: "Aprove ou recuse cada ação sugerida pelos agentes antes de qualquer execução.",

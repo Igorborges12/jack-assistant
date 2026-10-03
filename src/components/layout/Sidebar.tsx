@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { mockUser } from "@/mocks";
+import { useDb } from "@/hooks/useDb";
 
 interface NavItem {
   to: string;
@@ -9,29 +10,30 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { to: "/dashboard", label: "Home", glyph: "⌂" },
+  { to: "/dashboard", label: "Início", glyph: "⌂" },
   { to: "/chat", label: "Chat", glyph: "✦" },
-  { to: "/career", label: "Career", glyph: "◈" },
-  { to: "/email", label: "Email", glyph: "✉", badge: "4" },
-  { to: "/study", label: "Study", glyph: "✎" },
+  { to: "/career", label: "Carreira", glyph: "◈" },
+  { to: "/email", label: "E-mail", glyph: "✉" },
+  { to: "/study", label: "Estudos", glyph: "✎" },
   { to: "/agenda", label: "Agenda", glyph: "▤" },
-  { to: "/approvals", label: "Approvals", glyph: "✓", badge: "3" },
-  { to: "/settings", label: "Settings", glyph: "⚙" },
+  { to: "/approvals", label: "Aprovações", glyph: "✓", badge: "approvals" },
+  { to: "/settings", label: "Configurações", glyph: "⚙" },
 ];
 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const navigate = useNavigate();
+  const pendingCount = useDb((s) => s.approvals.filter((a) => a.status === "pending").length);
 
   return (
     <div className="glass flex h-full flex-col rounded-3xl p-4">
       <div className="flex items-center gap-2.5 px-2 py-2">
         <div className="gradient-brand shadow-brand grid size-9 place-items-center rounded-xl font-display text-sm font-bold text-primary-foreground">
-          A
+          J
         </div>
         <div>
-          <p className="font-display text-[15px] leading-none font-semibold">Personal AI OS</p>
+          <p className="font-display text-[15px] leading-none font-semibold">Jack</p>
           <p className="mt-1 text-[10px] tracking-[0.18em] text-muted-foreground uppercase">
-            Assistente modular
+            Personal AI OS
           </p>
         </div>
       </div>
@@ -50,9 +52,9 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               {item.glyph}
             </span>
             {item.label}
-            {item.badge ? (
+            {item.badge && pendingCount > 0 ? (
               <span className="ml-auto rounded-full bg-brand/10 px-1.5 py-0.5 text-[10px] font-semibold text-brand">
-                {item.badge}
+                {pendingCount}
               </span>
             ) : null}
           </Link>

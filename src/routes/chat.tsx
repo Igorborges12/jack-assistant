@@ -12,15 +12,15 @@ import type { ChatMessage as ChatMessageType } from "@/types";
 export const Route = createFileRoute("/chat")({
   head: () => ({
     meta: [
-      { title: "Chat — Personal AI OS" },
+      { title: "Chat — Jack" },
       {
         name: "description",
-        content: "Converse com o orquestrador e os agentes do Personal AI OS.",
+        content: "Converse com o orquestrador e os agentes do Jack.",
       },
-      { property: "og:title", content: "Chat — Personal AI OS" },
+      { property: "og:title", content: "Chat — Jack" },
       {
         property: "og:description",
-        content: "Converse com o orquestrador e os agentes do Personal AI OS.",
+        content: "Converse com o orquestrador e os agentes do Jack.",
       },
     ],
   }),

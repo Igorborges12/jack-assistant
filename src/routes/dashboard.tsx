@@ -18,12 +18,12 @@ import type { Approval } from "@/types";
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Dashboard — Personal AI OS" },
+      { title: "Dashboard — Jack" },
       {
         name: "description",
         content: "Resumo diário de vagas, e-mails, agenda, tarefas e ações pendentes.",
       },
-      { property: "og:title", content: "Dashboard — Personal AI OS" },
+      { property: "og:title", content: "Dashboard — Jack" },
       {
         property: "og:description",
         content: "Resumo diário de vagas, e-mails, agenda, tarefas e ações pendentes.",

@@ -10,12 +10,12 @@ import { formatDate } from "@/lib/format";
 export const Route = createFileRoute("/career")({
   head: () => ({
     meta: [
-      { title: "Career — Personal AI OS" },
+      { title: "Career — Jack" },
       {
         name: "description",
         content: "Novas vagas, candidaturas, empresas monitoradas e currículos em um só lugar.",
       },
-      { property: "og:title", content: "Career — Personal AI OS" },
+      { property: "og:title", content: "Career — Jack" },
       {
         property: "og:description",
         content: "Novas vagas, candidaturas, empresas monitoradas e currículos em um só lugar.",
