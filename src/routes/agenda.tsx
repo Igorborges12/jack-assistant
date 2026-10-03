@@ -11,12 +11,12 @@ import { calendarService, tasksService } from "@/services";
 export const Route = createFileRoute("/agenda")({
   head: () => ({
     meta: [
-      { title: "Agenda — Personal AI OS" },
+      { title: "Agenda — Jack" },
       {
         name: "description",
         content: "Eventos, compromissos e tarefas organizados pelo Life Agent.",
       },
-      { property: "og:title", content: "Agenda — Personal AI OS" },
+      { property: "og:title", content: "Agenda — Jack" },
       {
         property: "og:description",
         content: "Eventos, compromissos e tarefas organizados pelo Life Agent.",

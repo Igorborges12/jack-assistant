@@ -8,12 +8,12 @@ import { studyService } from "@/services";
 export const Route = createFileRoute("/study")({
   head: () => ({
     meta: [
-      { title: "Study — Personal AI OS" },
+      { title: "Study — Jack" },
       {
         name: "description",
         content: "Estudos de hoje, cursos, matérias, progresso e próximos blocos de estudo.",
       },
-      { property: "og:title", content: "Study — Personal AI OS" },
+      { property: "og:title", content: "Study — Jack" },
       {
         property: "og:description",
         content: "Estudos de hoje, cursos, matérias, progresso e próximos blocos de estudo.",

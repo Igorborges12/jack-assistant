@@ -11,12 +11,12 @@ import { formatTime } from "@/lib/format";
 export const Route = createFileRoute("/email")({
   head: () => ({
     meta: [
-      { title: "Email — Personal AI OS" },
+      { title: "Email — Jack" },
       {
         name: "description",
         content: "Inbox resumido, e-mails importantes, rascunhos e ações aguardando aprovação.",
       },
-      { property: "og:title", content: "Email — Personal AI OS" },
+      { property: "og:title", content: "Email — Jack" },
       {
         property: "og:description",
         content: "Inbox resumido, e-mails importantes, rascunhos e ações aguardando aprovação.",

@@ -5,13 +5,13 @@ import { Button } from "@/components/common/Button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Entrar — Personal AI OS" },
+      { title: "Entrar — Jack" },
       {
         name: "description",
         content:
-          "Acesse o Personal AI OS, seu assistente pessoal modular para carreira, e-mails, estudos e agenda.",
+          "Acesse o Jack, seu assistente pessoal modular para carreira, e-mails, estudos e agenda.",
       },
-      { property: "og:title", content: "Entrar — Personal AI OS" },
+      { property: "og:title", content: "Entrar — Jack" },
       {
         property: "og:description",
         content: "Seu assistente pessoal de IA modular, com aprovação humana em cada ação.",
@@ -39,19 +39,19 @@ function LoginPage() {
       <div className="glass relative z-10 w-full max-w-md rounded-3xl p-7">
         <div className="flex items-center gap-2.5">
           <div className="gradient-brand shadow-brand grid size-9 place-items-center rounded-xl font-display text-sm font-bold text-primary-foreground">
-            A
+            J
           </div>
           <div>
-            <p className="font-display text-[15px] leading-none font-semibold">Personal AI OS</p>
+            <p className="font-display text-[15px] leading-none font-semibold">Jack</p>
             <p className="mt-1 text-[10px] tracking-[0.18em] text-muted-foreground uppercase">
-              Assistente modular
+              Personal AI OS
             </p>
           </div>
         </div>
 
         <h1 className="mt-7 font-display text-2xl font-bold tracking-tight">Bem-vindo de volta</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Entre para acessar seus agentes e aprovações.
+          Entre para conversar com o Jack e revisar suas aprovações.
         </p>
 
         <form onSubmit={onSubmit} className="mt-6 space-y-3">
