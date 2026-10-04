@@ -9,12 +9,12 @@ import type { AgentId } from "@/types";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — Jack" },
+      { title: "Configurações — Jack" },
       {
         name: "description",
         content: "Perfil, agentes ativos e preferências de aprovação do Jack.",
       },
-      { property: "og:title", content: "Settings — Jack" },
+      { property: "og:title", content: "Configurações — Jack" },
       {
         property: "og:description",
         content: "Perfil, agentes ativos e preferências de aprovação do Jack.",
@@ -30,7 +30,7 @@ function SettingsPage() {
   const navigate = useNavigate();
 
   return (
-    <AppLayout eyebrow="Conta" title="Settings" subtitle="Perfil, agentes e preferências.">
+    <AppLayout eyebrow="Conta" title="Configurações" subtitle="Perfil, agentes e preferências.">
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader title="Perfil" />
@@ -53,7 +53,7 @@ function SettingsPage() {
         </Card>
 
         <Card>
-          <CardHeader title="Agentes" description="Módulos disponíveis nesta versão." />
+          <CardHeader title="Agentes" description="Módulos que o Jack coordena." />
           <div className="flex flex-wrap gap-2">
             {agents.map((agent) => (
               <AgentBadge key={agent} agent={agent} active />

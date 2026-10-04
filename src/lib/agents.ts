@@ -1,11 +1,11 @@
 import type { AgentId } from "@/types";
 
 export const AGENT_LABELS: Record<AgentId, string> = {
-  orchestrator: "Orchestrator",
-  career: "Career",
-  email: "Email",
-  study: "Study",
-  life: "Life",
+  orchestrator: "Orquestrador",
+  career: "Carreira",
+  email: "E-mail",
+  study: "Estudos",
+  life: "Vida",
 };
 
 export const AGENT_GLYPH: Record<AgentId, string> = {
