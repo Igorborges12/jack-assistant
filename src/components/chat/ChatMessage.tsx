@@ -31,7 +31,7 @@ export function ChatMessage({ message }: { message: ChatMessageType }) {
           {message.streaming ? <span className="ml-1 animate-pulse">▍</span> : null}
         </div>
         <p className="mt-1 text-[10px] text-muted-foreground">
-          {message.agent ? `${AGENT_LABELS[message.agent]} · ` : ""}
+          {message.agent ? `Jack · ${AGENT_LABELS[message.agent]} · ` : "Jack · "}
           {formatTime(message.timestamp)}
         </p>
       </div>
