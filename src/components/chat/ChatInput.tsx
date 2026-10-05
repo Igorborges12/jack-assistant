@@ -23,7 +23,7 @@ export function ChatInput({ onSend, placeholder = "Digite o que você precisa...
         value={value}
         onChange={(event) => setValue(event.target.value)}
         placeholder={placeholder}
-        className="glass-soft flex-1 rounded-xl px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="glass-soft min-w-0 flex-1 rounded-xl px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       />
       <button
         type="submit"
