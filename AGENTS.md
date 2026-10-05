@@ -10,5 +10,6 @@
 <!-- LOVABLE:END -->
 
 ## Architecture
-- Data flows mocks (src/mocks) → services (src/services) → pages; never import mocks in components — so the FastAPI backend can replace services only.
+- Mock data seeds an in-memory session store (src/mocks/db.ts); services mutate it, pages read via useDb (select raw slices, derive outside selector) — keeps state across navigation and lets FastAPI replace services only.
 - App-specific reusable UI lives in src/components/common (not ui/, which is shadcn) — avoids case-only filename clashes.
+- Simulated chat replies live only in src/services/chatResponder.ts — single swap point for /api/chat.
