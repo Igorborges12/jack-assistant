@@ -9,7 +9,7 @@ interface CardProps {
 
 export function Card({ children, className, padded = true }: CardProps) {
   return (
-    <div className={cn("glass rounded-3xl", padded && "p-5", className)}>{children}</div>
+    <div className={cn("glass min-w-0 rounded-3xl", padded && "p-5", className)}>{children}</div>
   );
 }
 

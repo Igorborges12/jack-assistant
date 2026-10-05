@@ -58,7 +58,7 @@ function DashboardPage() {
           <div className="gradient-brand shadow-brand grid size-10 shrink-0 place-items-center rounded-2xl text-lg text-primary-foreground">
             ✦
           </div>
-          <div className="flex-1">
+          <div className="min-w-0 flex-1">
             <ChatInput onSend={askJack} />
           </div>
         </div>
@@ -76,7 +76,7 @@ function DashboardPage() {
       </Card>
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <StatCard to="/career" label="Vagas" value={jobs.length} hint={`${jobs.filter((j) => j.status === "new").length} novas`} tone="brand" />
+        <StatCard to="/career" label="Vagas" value={jobs.length} hint={(() => { const n = jobs.filter((j) => j.status === "new").length; return n === 1 ? "1 nova" : `${n} novas`; })()} tone="brand" />
         <StatCard to="/email" label="E-mails importantes" value={emails.filter((e) => e.important).length} hint="ver caixa de entrada" tone="amber" />
         <StatCard to="/agenda" label="Eventos hoje" value={todayEvents.length} hint={todayEvents[0] ? `próximo às ${todayEvents[0].time}` : "dia livre"} />
         <StatCard to="/agenda" label="Tarefas pendentes" value={openTasks.length} hint="abrir agenda" tone="mint" />
@@ -111,7 +111,7 @@ function DashboardPage() {
           )}
         </Card>
 
-        <div className="space-y-6">
+        <div className="min-w-0 space-y-6">
           <Card>
             <CardHeader title="Hoje" />
             {todayEvents.length === 0 ? (
