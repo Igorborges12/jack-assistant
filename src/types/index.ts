@@ -1,3 +1,4 @@
+
 export type AgentId = "orchestrator" | "career" | "email" | "study" | "life";
 
 export type StatusTone = "neutral" | "success" | "warning" | "danger" | "info";
@@ -40,10 +41,15 @@ export interface Job {
   status: JobStatus;
   favorite?: boolean;
   description?: string;
+  applicationUrl?: string | null;
+externalId?: string | null;
+discoveredAt?: string | null;
+origin?: "manual" | "crawler";
 }
 
 export interface Application {
   id: string;
+  jobId?: string;
   jobTitle: string;
   company: string;
   stage: ApplicationStage;
@@ -58,6 +64,7 @@ export const APPLICATION_STAGES = [
   "Aguardando retorno",
   "Encerrada",
 ] as const;
+
 export type ApplicationStage = (typeof APPLICATION_STAGES)[number];
 
 export interface Company {
